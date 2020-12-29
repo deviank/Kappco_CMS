@@ -17,10 +17,8 @@
 
     $connection = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-    if($connection){
-        echo 'We are connected';
-    } else {
-        echo 'No connection could be established.';
-    }
+    if (!$connection) {
+        die("Connection failed. ");
+      }
 
 ?>
